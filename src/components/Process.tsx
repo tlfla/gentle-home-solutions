@@ -1,5 +1,4 @@
-
-import { Phone, Search, HandShake } from "lucide-react";
+import { Phone, Search, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Process = () => {
@@ -24,7 +23,7 @@ export const Process = () => {
       color: "bg-[#7B68EE]"
     },
     {
-      icon: HandShake,
+      icon: Handshake,
       title: "Finalize Sale",
       description: "Choose your closing date. We handle all paperwork and can close in as little as 7 days - completely hassle-free.",
       color: "bg-[#F4B5A0]"
