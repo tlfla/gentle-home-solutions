@@ -8,7 +8,7 @@ export const Benefits = () => {
       title: "Experience with Inherited Properties",
       description: "We understand the emotional and legal complexities of inherited property. Our team guides you through every step with empathy and expertise.",
       iconBg: "bg-brand-purple",
-      cardBg: "bg-brand-purple/12",
+      cardBg: "bg-brand-purple/25",
       borderColor: "border-brand-purple/20",
       hoverBorder: "hover:border-brand-purple/40"
     },
@@ -17,7 +17,7 @@ export const Benefits = () => {
       title: "Transparent, Fair Offers",
       description: "No lowball offers or hidden fees. We provide honest, market-based valuations and explain exactly how we determine our offer price.",
       iconBg: "bg-brand-blue",
-      cardBg: "bg-brand-blue/12",
+      cardBg: "bg-brand-blue/25",
       borderColor: "border-brand-blue/25",
       hoverBorder: "hover:border-brand-blue/45"
     },
@@ -26,7 +26,7 @@ export const Benefits = () => {
       title: "Sell As-Is From Anywhere",
       description: "Don't worry about repairs, cleaning, or staging. We buy properties in any condition, and you don't need to be local to complete the sale.",
       iconBg: "bg-brand-purple",
-      cardBg: "bg-brand-purple/12",
+      cardBg: "bg-brand-purple/25",
       borderColor: "border-brand-purple/20",
       hoverBorder: "hover:border-brand-purple/40"
     },
@@ -35,14 +35,14 @@ export const Benefits = () => {
       title: "Decades of Proven Results",
       description: "With over 20 years of experience in Tampa Bay and West Florida, we've helped hundreds of families successfully sell inherited properties.",
       iconBg: "bg-brand-blue",
-      cardBg: "bg-brand-blue/12",
+      cardBg: "bg-brand-blue/25",
       borderColor: "border-brand-blue/25",
       hoverBorder: "hover:border-brand-blue/45"
     }
   ];
 
   return (
-    <section id="benefits" className="py-24 bg-gradient-to-br from-brand-purple/15 to-brand-blue/12">
+    <section id="benefits" className="py-24 bg-gradient-to-br from-brand-purple/30 to-brand-blue/25">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">

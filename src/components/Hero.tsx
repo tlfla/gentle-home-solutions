@@ -18,18 +18,18 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-white via-brand-purple/8 to-brand-blue/12">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-white via-brand-purple/25 to-brand-blue/30">
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Large floating circle */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-brand-purple/8 to-brand-blue/6 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-brand-purple/25 to-brand-blue/20 rounded-full blur-3xl animate-pulse"></div>
         
         {/* Medium floating shapes */}
-        <div className="absolute bottom-32 left-16 w-64 h-64 bg-gradient-to-tr from-brand-blue/10 to-brand-blue-light/8 rounded-full blur-2xl animate-bounce" style={{animationDuration: '6s'}}></div>
+        <div className="absolute bottom-32 left-16 w-64 h-64 bg-gradient-to-tr from-brand-blue/30 to-brand-blue-light/25 rounded-full blur-2xl animate-bounce" style={{animationDuration: '6s'}}></div>
         
         {/* Small accent shapes */}
-        <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-brand-purple/12 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-brand-blue/8 rounded-full blur-2xl animate-bounce" style={{animationDuration: '8s', animationDelay: '1s'}}></div>
+        <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-brand-purple/30 rounded-full blur-xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-brand-blue/25 rounded-full blur-2xl animate-bounce" style={{animationDuration: '8s', animationDelay: '1s'}}></div>
         
         {/* Subtle geometric patterns */}
         <div className="absolute top-1/2 right-1/4 w-24 h-24 border border-brand-purple/20 rounded-lg rotate-45 animate-spin" style={{animationDuration: '20s'}}></div>
