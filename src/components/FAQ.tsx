@@ -43,47 +43,52 @@ export const FAQ = () => {
   ];
 
   const getItemStyling = (index: number) => {
-    const isEven = index % 2 === 0;
-    if (isEven) {
+    const colorIndex = index % 3;
+    if (colorIndex === 0) {
       return {
-        background: "rgba(88, 101, 242, 0.05)",
+        background: "rgba(88, 101, 242, 0.04)",
         border: "border-l-4 border-[#5865F2]"
+      };
+    } else if (colorIndex === 1) {
+      return {
+        background: "rgba(244, 181, 160, 0.06)",
+        border: "border-l-4 border-[#F4B5A0]"
       };
     } else {
       return {
-        background: "rgba(244, 181, 160, 0.05)",
-        border: "border-l-4 border-[#F4B5A0]"
+        background: "rgba(232, 220, 192, 0.08)",
+        border: "border-l-4 border-[#E8DCC0]"
       };
     }
   };
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <section id="faq" className="py-24 bg-gradient-to-br from-[#F4B5A0]/4 to-[#E8DCC0]/6">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 leading-relaxed">
             We understand you have questions about selling inherited property. 
             Here are answers to the most common concerns we hear from families.
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-6">
           {faqs.map((faq, index) => {
             const styling = getItemStyling(index);
             return (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className={`rounded-lg px-6 ${styling.border} border-r border-t border-b border-gray-200 hover:shadow-md transition-all duration-200`}
+                className={`rounded-2xl px-8 ${styling.border} border-r border-t border-b border-gray-200 hover:shadow-lg transition-all duration-200 bg-white`}
                 style={{ backgroundColor: styling.background }}
               >
-                <AccordionTrigger className="text-left text-[#2C3E50] font-semibold hover:text-[#5865F2] transition-colors py-6">
+                <AccordionTrigger className="text-left text-[#2C3E50] font-bold hover:text-[#5865F2] transition-colors py-8 text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pb-6 leading-relaxed">
+                <AccordionContent className="text-gray-600 pb-8 leading-relaxed text-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -91,14 +96,16 @@ export const FAQ = () => {
           })}
         </Accordion>
 
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">Have a question not answered here?</p>
-          <a 
-            href="tel:+1-813-555-0199" 
-            className="inline-flex items-center text-[#5865F2] hover:text-[#7B68EE] font-semibold transition-colors"
-          >
-            Call us at (813) 555-0199 and we'll answer any questions you have.
-          </a>
+        <div className="text-center mt-16">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <p className="text-gray-600 mb-4 text-lg">Have a question not answered here?</p>
+            <a 
+              href="tel:+1-813-555-0199" 
+              className="inline-flex items-center text-[#5865F2] hover:text-[#7B68EE] font-bold transition-colors text-lg"
+            >
+              Call us at (813) 555-0199 and we'll answer any questions you have.
+            </a>
+          </div>
         </div>
       </div>
     </section>

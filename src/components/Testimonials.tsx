@@ -7,78 +7,92 @@ export const Testimonials = () => {
       name: "Maria Rodriguez",
       location: "Tampa, FL",
       text: "After my father passed, dealing with his house felt overwhelming. SellMyHouseNow.com made everything so simple. They were compassionate, fair, and handled all the paperwork. I got my check in 10 days without any stress.",
-      rating: 5
+      rating: 5,
+      bgColor: "bg-[#5865F2]/5",
+      borderColor: "border-[#5865F2]/20",
+      accentColor: "bg-[#5865F2]"
     },
     {
       name: "David Chen",
       location: "Seattle, WA (Property in Clearwater)",
       text: "I inherited my grandmother's house in Clearwater but live in Seattle. I thought selling would be impossible, but they handled everything remotely. Professional, transparent, and exactly what they promised. Highly recommend!",
-      rating: 5
+      rating: 5,
+      bgColor: "bg-[#F4B5A0]/8",
+      borderColor: "border-[#F4B5A0]/25",
+      accentColor: "bg-[#F4B5A0]"
     },
     {
       name: "Jennifer Williams",
       location: "New Port Richey, FL",
       text: "Three siblings inheriting one house - we thought it would be a nightmare. The team helped us navigate everything smoothly, and we all felt the offer was very fair. They really understand family dynamics and inherited property challenges.",
-      rating: 5
+      rating: 5,
+      bgColor: "bg-[#E8DCC0]/12",
+      borderColor: "border-[#E8DCC0]/30",
+      accentColor: "bg-[#E8DCC0]"
     },
     {
       name: "Robert Thompson",
       location: "St. Petersburg, FL",
       text: "My mother's house needed major repairs after sitting vacant for two years. I couldn't afford to fix it up. They bought it as-is for a fair price and closed in a week. Exactly what I needed during a difficult time.",
-      rating: 5
+      rating: 5,
+      bgColor: "bg-[#5865F2]/5",
+      borderColor: "border-[#5865F2]/20",
+      accentColor: "bg-[#5865F2]"
     }
   ];
 
   const StarRating = ({ rating }: { rating: number }) => (
     <div className="flex space-x-1">
       {[...Array(rating)].map((_, i) => (
-        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+        <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
       ))}
     </div>
   );
 
   return (
-    <section className="py-20 bg-gradient-to-br from-[#E8DCC0]/20 to-gray-50">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
             What Families Say About Us
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Real stories from real families who trusted us with their inherited property sales. 
             We're proud to help during difficult times with compassion and professionalism.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-10">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-              <div className="mb-4">
-                <StarRating rating={testimonial.rating} />
-              </div>
-              <blockquote className="text-gray-600 mb-6 leading-relaxed italic">
-                "{testimonial.text}"
-              </blockquote>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#5865F2] to-[#7B68EE] rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
-                  {testimonial.name.charAt(0)}
+            <div key={index} className="group">
+              <div className={`${testimonial.bgColor} rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${testimonial.borderColor} hover:scale-[1.02]`}>
+                <div className="mb-6">
+                  <StarRating rating={testimonial.rating} />
                 </div>
-                <div>
-                  <div className="font-semibold text-[#2C3E50]">{testimonial.name}</div>
-                  <div className="text-sm text-gray-500">{testimonial.location}</div>
+                <blockquote className="text-gray-700 mb-8 leading-relaxed italic text-lg font-medium">
+                  "{testimonial.text}"
+                </blockquote>
+                <div className="flex items-center">
+                  <div className={`w-16 h-16 ${testimonial.accentColor} rounded-full flex items-center justify-center text-white font-bold text-xl mr-6 shadow-lg`}>
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="font-bold text-[#2C3E50] text-lg">{testimonial.name}</div>
+                    <div className="text-gray-500 text-base">{testimonial.location}</div>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl mx-auto">
-            <div className="flex justify-center mb-4">
+        <div className="mt-20 text-center">
+          <div className="bg-gradient-to-br from-[#5865F2]/5 to-[#F4B5A0]/5 rounded-3xl p-12 shadow-xl border-2 border-[#5865F2]/10 max-w-2xl mx-auto">
+            <div className="flex justify-center mb-6">
               <StarRating rating={5} />
             </div>
-            <h3 className="text-2xl font-bold text-[#2C3E50] mb-2">4.9/5 Average Rating</h3>
-            <p className="text-gray-600">
+            <h3 className="text-3xl font-bold text-[#2C3E50] mb-4">4.9/5 Average Rating</h3>
+            <p className="text-gray-600 text-lg leading-relaxed">
               Based on 200+ inherited property sales in Tampa Bay & West Florida over the past 5 years.
             </p>
           </div>
