@@ -30,11 +30,11 @@ export const Expectations = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
-            What You Can Expect
+            What You Can Expect When Selling Your Inherited Property
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Our streamlined process makes selling your inherited property simple and stress-free.
-          </p>
+          <h3 className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Our streamlined process makes selling your inherited property in Tampa Bay simple and stress-free.
+          </h3>
         </div>
 
         <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border-2 border-brand-purple/20 hover:border-brand-purple/30 transition-all duration-300">
@@ -45,9 +45,9 @@ export const Expectations = () => {
                   <expectation.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-[#2C3E50] group-hover:text-brand-purple transition-colors duration-300">
+                  <h4 className="text-xl font-semibold text-[#2C3E50] group-hover:text-brand-purple transition-colors duration-300">
                     {expectation.title}
-                  </h3>
+                  </h4>
                 </div>
                 <div className="w-3 h-3 bg-brand-purple rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>

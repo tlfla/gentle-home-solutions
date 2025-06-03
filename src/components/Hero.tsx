@@ -46,9 +46,9 @@ export const Hero = () => {
                 Sell Your Inherited Property in 
                 <span className="text-brand-purple block mt-2 drop-shadow-sm">Tampa Bay & West Florida</span>
               </h1>
-              <p className="text-xl md:text-2xl text-[#2C3E50] opacity-80 leading-relaxed drop-shadow-sm">
+              <h2 className="text-xl md:text-2xl text-[#2C3E50] opacity-80 leading-relaxed drop-shadow-sm">
                 No repairs, no cleaning, no hassle. We understand the challenges of inherited property and make selling simple and stress-free.
-              </p>
+              </h2>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6">
@@ -92,8 +92,9 @@ export const Hero = () => {
             <div className="relative z-10 bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50">
               <img 
                 src="/lovable-uploads/07fce53f-5958-4d0f-9385-f596c136cbf5.png" 
-                alt="Person contemplating inherited house - representing the emotional journey of inheriting property"
+                alt="Inherited property consultation - Tampa Bay family selling inherited house with professional guidance"
                 className="w-full h-auto rounded-2xl shadow-lg"
+                loading="eager"
               />
             </div>
             {/* Soft glow effect behind image */}
