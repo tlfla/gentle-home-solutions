@@ -42,6 +42,21 @@ export const FAQ = () => {
     }
   ];
 
+  const getItemStyling = (index: number) => {
+    const isEven = index % 2 === 0;
+    if (isEven) {
+      return {
+        background: "rgba(88, 101, 242, 0.05)",
+        border: "border-l-4 border-[#5865F2]"
+      };
+    } else {
+      return {
+        background: "rgba(244, 181, 160, 0.05)",
+        border: "border-l-4 border-[#F4B5A0]"
+      };
+    }
+  };
+
   return (
     <section id="faq" className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,20 +71,24 @@ export const FAQ = () => {
         </div>
 
         <Accordion type="single" collapsible className="space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
-              value={`item-${index}`}
-              className="bg-gray-50 rounded-lg px-6 border border-gray-200 hover:border-[#5865F2] transition-colors"
-            >
-              <AccordionTrigger className="text-left text-[#2C3E50] font-semibold hover:text-[#5865F2] transition-colors py-6">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600 pb-6 leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+          {faqs.map((faq, index) => {
+            const styling = getItemStyling(index);
+            return (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className={`rounded-lg px-6 ${styling.border} border-r border-t border-b border-gray-200 hover:shadow-md transition-all duration-200`}
+                style={{ backgroundColor: styling.background }}
+              >
+                <AccordionTrigger className="text-left text-[#2C3E50] font-semibold hover:text-[#5865F2] transition-colors py-6">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 pb-6 leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
         </Accordion>
 
         <div className="text-center mt-12">
