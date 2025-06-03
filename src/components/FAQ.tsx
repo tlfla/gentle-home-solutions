@@ -46,21 +46,21 @@ export const FAQ = () => {
     const isEven = index % 2 === 0;
     if (isEven) {
       return {
-        background: "bg-[#7B68EE]/12",
-        border: "border-l-4 border-[#7B68EE]",
-        hoverText: "hover:text-[#7B68EE]"
+        background: "bg-brand-purple/12",
+        border: "border-l-4 border-brand-purple",
+        hoverText: "hover:text-brand-purple"
       };
     } else {
       return {
-        background: "bg-[#A8C8F0]/15",
-        border: "border-l-4 border-[#A8C8F0]",
-        hoverText: "hover:text-[#A8C8F0]"
+        background: "bg-brand-blue/15",
+        border: "border-l-4 border-brand-blue",
+        hoverText: "hover:text-brand-blue"
       };
     }
   };
 
   return (
-    <section id="faq" className="py-24 bg-gradient-to-br from-[#A8C8F0]/18 to-[#7B68EE]/12">
+    <section id="faq" className="py-24 bg-gradient-to-br from-brand-blue/18 to-brand-purple/12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
@@ -93,11 +93,11 @@ export const FAQ = () => {
         </Accordion>
 
         <div className="text-center mt-16">
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-[#7B68EE]/20">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-brand-purple/20">
             <p className="text-gray-600 mb-4 text-lg">Have a question not answered here?</p>
             <a 
               href="tel:+1-813-555-0199" 
-              className="inline-flex items-center text-[#7B68EE] hover:text-[#A8C8F0] font-bold transition-colors text-lg"
+              className="inline-flex items-center text-brand-purple hover:text-brand-blue font-bold transition-colors text-lg"
             >
               Call us at (813) 555-0199 and we'll answer any questions you have.
             </a>

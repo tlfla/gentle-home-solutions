@@ -7,42 +7,42 @@ export const Benefits = () => {
       icon: Heart,
       title: "Experience with Inherited Properties",
       description: "We understand the emotional and legal complexities of inherited property. Our team guides you through every step with empathy and expertise.",
-      iconBg: "bg-[#7B68EE]",
-      cardBg: "bg-[#7B68EE]/12",
-      borderColor: "border-[#7B68EE]/20",
-      hoverBorder: "hover:border-[#7B68EE]/40"
+      iconBg: "bg-brand-purple",
+      cardBg: "bg-brand-purple/12",
+      borderColor: "border-brand-purple/20",
+      hoverBorder: "hover:border-brand-purple/40"
     },
     {
       icon: DollarSign,
       title: "Transparent, Fair Offers",
       description: "No lowball offers or hidden fees. We provide honest, market-based valuations and explain exactly how we determine our offer price.",
-      iconBg: "bg-[#A8C8F0]",
-      cardBg: "bg-[#A8C8F0]/12",
-      borderColor: "border-[#A8C8F0]/25",
-      hoverBorder: "hover:border-[#A8C8F0]/45"
+      iconBg: "bg-brand-blue",
+      cardBg: "bg-brand-blue/12",
+      borderColor: "border-brand-blue/25",
+      hoverBorder: "hover:border-brand-blue/45"
     },
     {
       icon: Home,
       title: "Sell As-Is From Anywhere",
       description: "Don't worry about repairs, cleaning, or staging. We buy properties in any condition, and you don't need to be local to complete the sale.",
-      iconBg: "bg-[#7B68EE]",
-      cardBg: "bg-[#7B68EE]/12",
-      borderColor: "border-[#7B68EE]/20",
-      hoverBorder: "hover:border-[#7B68EE]/40"
+      iconBg: "bg-brand-purple",
+      cardBg: "bg-brand-purple/12",
+      borderColor: "border-brand-purple/20",
+      hoverBorder: "hover:border-brand-purple/40"
     },
     {
       icon: Clock,
       title: "Decades of Proven Results",
       description: "With over 20 years of experience in Tampa Bay and West Florida, we've helped hundreds of families successfully sell inherited properties.",
-      iconBg: "bg-[#A8C8F0]",
-      cardBg: "bg-[#A8C8F0]/12",
-      borderColor: "border-[#A8C8F0]/25",
-      hoverBorder: "hover:border-[#A8C8F0]/45"
+      iconBg: "bg-brand-blue",
+      cardBg: "bg-brand-blue/12",
+      borderColor: "border-brand-blue/25",
+      hoverBorder: "hover:border-brand-blue/45"
     }
   ];
 
   return (
-    <section id="benefits" className="py-24 bg-gradient-to-br from-[#7B68EE]/15 to-[#A8C8F0]/12">
+    <section id="benefits" className="py-24 bg-gradient-to-br from-brand-purple/15 to-brand-blue/12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
@@ -72,7 +72,7 @@ export const Benefits = () => {
           ))}
         </div>
 
-        <div className="mt-20 bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-xl border-2 border-[#7B68EE]/15 hover:border-[#7B68EE]/25 transition-colors duration-300">
+        <div className="mt-20 bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-xl border-2 border-brand-purple/15 hover:border-brand-purple/25 transition-colors duration-300">
           <div className="text-center">
             <h3 className="text-3xl font-bold text-[#2C3E50] mb-6">Serving Tampa Bay & West Florida</h3>
             <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
@@ -84,9 +84,9 @@ export const Benefits = () => {
                 <span 
                   key={city} 
                   className={`px-5 py-3 rounded-full font-semibold text-white shadow-md hover:shadow-lg transition-all duration-200 ${
-                    idx % 3 === 0 ? 'bg-[#7B68EE] hover:bg-[#A8C8F0] hover:text-[#2C3E50]' :
-                    idx % 3 === 1 ? 'bg-[#A8C8F0] hover:bg-[#7B68EE] text-[#2C3E50] hover:text-white' :
-                    'bg-[#F4B5A0] hover:bg-[#E8DCC0] text-[#2C3E50]'
+                    idx % 3 === 0 ? 'bg-brand-purple hover:bg-brand-blue hover:text-[#2C3E50]' :
+                    idx % 3 === 1 ? 'bg-brand-blue hover:bg-brand-purple text-[#2C3E50] hover:text-white' :
+                    'bg-brand-coral hover:bg-brand-cream text-[#2C3E50]'
                   }`}
                 >
                   {city}

@@ -42,7 +42,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-[#7B68EE]/18 to-[#A8C8F0]/15">
+    <section id="contact" className="py-20 bg-gradient-to-br from-brand-purple/18 to-brand-blue/15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#2C3E50] mb-4">
@@ -56,7 +56,7 @@ export const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[#7B68EE]/20">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-brand-purple/20">
             <h3 className="text-2xl font-bold text-[#2C3E50] mb-6">Send Us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
@@ -71,7 +71,7 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="border-gray-300 focus:border-[#7B68EE] focus:ring-[#7B68EE]"
+                    className="border-gray-300 focus:border-brand-purple focus:ring-brand-purple"
                     placeholder="Your name"
                   />
                 </div>
@@ -86,7 +86,7 @@ export const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="border-gray-300 focus:border-[#7B68EE] focus:ring-[#7B68EE]"
+                    className="border-gray-300 focus:border-brand-purple focus:ring-brand-purple"
                     placeholder="(813) 555-0123"
                   />
                 </div>
@@ -103,7 +103,7 @@ export const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="border-gray-300 focus:border-[#7B68EE] focus:ring-[#7B68EE]"
+                  className="border-gray-300 focus:border-brand-purple focus:ring-brand-purple"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -118,7 +118,7 @@ export const Contact = () => {
                   name="property"
                   value={formData.property}
                   onChange={handleChange}
-                  className="border-gray-300 focus:border-[#7B68EE] focus:ring-[#7B68EE]"
+                  className="border-gray-300 focus:border-brand-purple focus:ring-brand-purple"
                   placeholder="1234 Main St, Tampa, FL 33601"
                 />
               </div>
@@ -133,14 +133,14 @@ export const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="border-gray-300 focus:border-[#7B68EE] focus:ring-[#7B68EE]"
+                  className="border-gray-300 focus:border-brand-purple focus:ring-brand-purple"
                   placeholder="Tell us about your inherited property, timeline, or any specific concerns..."
                 />
               </div>
 
               <Button 
                 type="submit"
-                className="w-full bg-[#7B68EE] hover:bg-[#A8C8F0] hover:text-[#2C3E50] text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                className="w-full bg-brand-purple hover:bg-brand-blue hover:text-[#2C3E50] text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 Get My Free Offer
               </Button>
@@ -154,12 +154,12 @@ export const Contact = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#7B68EE] w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="bg-brand-purple w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#2C3E50] mb-1">Call Us</h4>
-                    <a href="tel:+1-813-555-0199" className="text-[#7B68EE] hover:text-[#A8C8F0] text-lg font-medium transition-colors">
+                    <a href="tel:+1-813-555-0199" className="text-brand-purple hover:text-brand-blue text-lg font-medium transition-colors">
                       (813) 555-0199
                     </a>
                     <p className="text-sm text-gray-600">Available 7 days a week</p>
@@ -167,12 +167,12 @@ export const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#A8C8F0] w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="bg-brand-blue w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#2C3E50] mb-1">Email Us</h4>
-                    <a href="mailto:info@sellmyhousenow.com" className="text-[#7B68EE] hover:text-[#A8C8F0] font-medium transition-colors">
+                    <a href="mailto:info@sellmyhousenow.com" className="text-brand-purple hover:text-brand-blue font-medium transition-colors">
                       info@sellmyhousenow.com
                     </a>
                     <p className="text-sm text-gray-600">We respond within 24 hours</p>
@@ -180,7 +180,7 @@ export const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#F4B5A0] w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="bg-brand-coral w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -191,7 +191,7 @@ export const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#E8DCC0] w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="bg-brand-cream w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-[#2C3E50]" />
                   </div>
                   <div>
@@ -204,7 +204,7 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#7B68EE] to-[#A8C8F0] rounded-2xl p-8 text-white shadow-xl">
+            <div className="bg-gradient-to-br from-brand-purple to-brand-blue rounded-2xl p-8 text-white shadow-xl">
               <h4 className="text-xl font-bold mb-4">Why Call Us Today?</h4>
               <ul className="space-y-3 text-sm">
                 <li className="flex items-center">
@@ -233,7 +233,7 @@ export const Contact = () => {
         </div>
 
         {/* Footer */}
-        <div className="mt-20 pt-8 border-t border-[#7B68EE]/20 text-center text-gray-600">
+        <div className="mt-20 pt-8 border-t border-brand-purple/20 text-center text-gray-600">
           <p className="mb-4">
             © 2024 SellMyHouseNow.com. Licensed real estate professionals serving Tampa Bay & West Florida.
           </p>
