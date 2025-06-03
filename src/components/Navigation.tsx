@@ -15,7 +15,7 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+    <nav className="fixed top-0 w-full bg-[rgb(250,230,220)]/95 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -58,7 +58,7 @@ export const Navigation = () => {
 
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[rgb(250,230,220)] border-t">
               <button onClick={() => scrollToSection('process')} className="block px-3 py-2 text-[#2C3E50] hover:text-[#5865F2]">
                 How It Works
               </button>
