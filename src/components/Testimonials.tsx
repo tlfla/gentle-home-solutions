@@ -8,36 +8,36 @@ export const Testimonials = () => {
       location: "Tampa, FL",
       text: "After my father passed, dealing with his house felt overwhelming. SellMyHouseNow.com made everything so simple. They were compassionate, fair, and handled all the paperwork. I got my check in 10 days without any stress.",
       rating: 5,
-      bgColor: "bg-[#5865F2]/5",
-      borderColor: "border-[#5865F2]/20",
-      accentColor: "bg-[#5865F2]"
+      bgColor: "bg-[#7B68EE]/10",
+      borderColor: "border-[#7B68EE]/20",
+      accentColor: "bg-[#7B68EE]"
     },
     {
       name: "David Chen",
       location: "Seattle, WA (Property in Clearwater)",
       text: "I inherited my grandmother's house in Clearwater but live in Seattle. I thought selling would be impossible, but they handled everything remotely. Professional, transparent, and exactly what they promised. Highly recommend!",
       rating: 5,
-      bgColor: "bg-[#F4B5A0]/8",
-      borderColor: "border-[#F4B5A0]/25",
-      accentColor: "bg-[#F4B5A0]"
+      bgColor: "bg-[#A8C8F0]/12",
+      borderColor: "border-[#A8C8F0]/25",
+      accentColor: "bg-[#A8C8F0]"
     },
     {
       name: "Jennifer Williams",
       location: "New Port Richey, FL",
       text: "Three siblings inheriting one house - we thought it would be a nightmare. The team helped us navigate everything smoothly, and we all felt the offer was very fair. They really understand family dynamics and inherited property challenges.",
       rating: 5,
-      bgColor: "bg-[#E8DCC0]/12",
-      borderColor: "border-[#E8DCC0]/30",
-      accentColor: "bg-[#E8DCC0]"
+      bgColor: "bg-[#7B68EE]/10",
+      borderColor: "border-[#7B68EE]/20",
+      accentColor: "bg-[#7B68EE]"
     },
     {
       name: "Robert Thompson",
       location: "St. Petersburg, FL",
       text: "My mother's house needed major repairs after sitting vacant for two years. I couldn't afford to fix it up. They bought it as-is for a fair price and closed in a week. Exactly what I needed during a difficult time.",
       rating: 5,
-      bgColor: "bg-[#5865F2]/5",
-      borderColor: "border-[#5865F2]/20",
-      accentColor: "bg-[#5865F2]"
+      bgColor: "bg-[#A8C8F0]/12",
+      borderColor: "border-[#A8C8F0]/25",
+      accentColor: "bg-[#A8C8F0]"
     }
   ];
 
@@ -87,7 +87,7 @@ export const Testimonials = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <div className="bg-gradient-to-br from-[#5865F2]/5 to-[#F4B5A0]/5 rounded-3xl p-12 shadow-xl border-2 border-[#5865F2]/10 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-br from-[#7B68EE]/12 to-[#A8C8F0]/10 rounded-3xl p-12 shadow-xl border-2 border-[#7B68EE]/15 max-w-2xl mx-auto">
             <div className="flex justify-center mb-6">
               <StarRating rating={5} />
             </div>
