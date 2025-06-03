@@ -1,9 +1,0 @@
-
-:root {
-  /* Brand colors in HSL format for proper opacity support */
-  --brand-purple: 252 66% 67%;  /* #7B68EE */
-  --brand-blue: 212 62% 78%;    /* #A8C8F0 */
-  --brand-blue-light: 213 64% 82%; /* #B8D4F2 */
-  --brand-coral: 15 75% 78%;    /* #F4B5A0 */
-  --brand-cream: 48 38% 82%;    /* #E8DCC0 */
-}
