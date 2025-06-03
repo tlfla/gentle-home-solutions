@@ -54,9 +54,9 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-brand-purple/20">
+        <div className="grid lg:grid-cols-3 gap-12 items-start">
+          {/* Contact Form - Takes up 2 columns */}
+          <div className="lg:col-span-2 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-brand-purple/20">
             <h3 className="text-2xl font-bold text-[#2C3E50] mb-6">Send Us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
@@ -147,9 +147,9 @@ export const Contact = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
+          {/* Contact Information - Takes up 1 column */}
+          <div className="lg:col-span-1">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-brand-purple/20">
               <h3 className="text-2xl font-bold text-[#2C3E50] mb-6">Get In Touch</h3>
               
               <div className="space-y-6">
@@ -203,44 +203,7 @@ export const Contact = () => {
                 </div>
               </div>
             </div>
-
-            <div className="bg-gradient-to-br from-brand-purple to-brand-blue rounded-2xl p-8 text-white shadow-xl">
-              <h4 className="text-xl font-bold mb-4">Why Call Us Today?</h4>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Free consultation with no obligations
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Fair market offer within 24 hours
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Close in as little as 7 days
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  No repairs or cleaning required
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  All closing costs covered by us
-                </li>
-              </ul>
-            </div>
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="mt-20 pt-8 border-t border-brand-purple/20 text-center text-gray-600">
-          <p className="mb-4">
-            © 2024 SellMyHouseNow.com. Licensed real estate professionals serving Tampa Bay & West Florida.
-          </p>
-          <p className="text-sm">
-            We specialize in inherited property sales, probate assistance, and helping families 
-            navigate property transitions with compassion and expertise.
-          </p>
         </div>
       </div>
     </section>

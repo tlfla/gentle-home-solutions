@@ -4,7 +4,9 @@ import { Process } from "@/components/Process";
 import { Benefits } from "@/components/Benefits";
 import { FAQ } from "@/components/FAQ";
 import { Testimonials } from "@/components/Testimonials";
+import { Expectations } from "@/components/Expectations";
 import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
@@ -16,7 +18,9 @@ const Index = () => {
       <Benefits />
       <FAQ />
       <Testimonials />
+      <Expectations />
       <Contact />
+      <Footer />
     </div>
   );
 };
