@@ -43,9 +43,9 @@ export const Hero = () => {
           <div className="space-y-6 sm:space-y-8 lg:space-y-12 animate-fade-in">
             {/* 1. Headline text */}
             <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C3E50] leading-tight drop-shadow-sm text-center md:text-left">
+              <h1 className="font-playfair text-shadow-light text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C3E50] leading-tight text-center md:text-left">
                 Sell Your Inherited Property in 
-                <span className="text-brand-purple block mt-1 sm:mt-2 drop-shadow-sm">Tampa Bay & West Florida</span>
+                <span className="text-brand-purple block mt-1 sm:mt-2">Tampa Bay & West Florida</span>
               </h1>
               {/* 2. Subtext */}
               <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#2C3E50] opacity-80 leading-relaxed drop-shadow-sm text-center md:text-left">

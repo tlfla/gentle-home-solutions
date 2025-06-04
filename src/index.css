@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,4 +66,14 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom font classes */
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.05em;
+}
+
+.text-shadow-light {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
