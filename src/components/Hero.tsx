@@ -43,12 +43,12 @@ export const Hero = () => {
           <div className="space-y-6 sm:space-y-8 lg:space-y-12 animate-fade-in">
             {/* 1. Headline text */}
             <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C3E50] leading-tight drop-shadow-sm">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C3E50] leading-tight drop-shadow-sm text-center md:text-left">
                 Sell Your Inherited Property in 
                 <span className="text-brand-purple block mt-1 sm:mt-2 drop-shadow-sm">Tampa Bay & West Florida</span>
               </h1>
               {/* 2. Subtext */}
-              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#2C3E50] opacity-80 leading-relaxed drop-shadow-sm">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#2C3E50] opacity-80 leading-relaxed drop-shadow-sm text-center md:text-left">
                 No repairs, no cleaning, no hassle. We understand the challenges of inherited property and make selling simple and stress-free.
               </h2>
             </div>
@@ -68,7 +68,7 @@ export const Hero = () => {
             </div>
 
             {/* 4. CTA buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
               <Button 
                 onClick={scrollToContact}
                 size="lg"
@@ -89,7 +89,7 @@ export const Hero = () => {
             </div>
 
             {/* 5. Feature badges */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 lg:space-x-8 text-[#2C3E50]">
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 lg:space-x-8 text-[#2C3E50]">
               <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-full px-3 sm:px-4 py-2 shadow-md">
                 <div className="w-2 h-2 sm:w-3 sm:h-3 bg-brand-purple rounded-full mr-2 sm:mr-3"></div>
                 <span className="text-sm sm:text-base lg:text-lg font-medium">No Hidden Fees</span>
@@ -121,8 +121,8 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Scroll Indicator - Hidden on Mobile */}
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
         <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-[#2C3E50]/70 rounded-full flex justify-center bg-white/50 backdrop-blur-sm shadow-lg">
           <div className="w-1 h-2 sm:h-3 bg-[#2C3E50]/70 rounded-full mt-1 sm:mt-2 animate-pulse"></div>
         </div>
