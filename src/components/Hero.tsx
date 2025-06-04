@@ -43,7 +43,7 @@ export const Hero = () => {
           <div className="space-y-6 sm:space-y-8 lg:space-y-12 animate-fade-in">
             {/* 1. Headline text */}
             <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-              <h1 className="font-playfair text-shadow-light text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#2C3E50] leading-tight text-center md:text-left">
+              <h1 className="font-playfair text-shadow-light text-4xl sm:text-6xl font-black sm:font-bold text-[#2C3E50] leading-tight text-center md:text-left">
                 Sell Your Inherited Property in 
                 <span className="text-brand-purple block mt-1 sm:mt-2">Tampa Bay & West Florida</span>
               </h1>

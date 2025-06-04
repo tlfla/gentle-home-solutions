@@ -41,7 +41,7 @@ export const Process = () => {
     <section id="process" className="py-24 bg-gradient-to-br from-brand-blue/15 to-brand-blue-light/12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-playfair text-shadow-light text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
+          <h2 className="text-shadow-light text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
             Simple 3-Step Process
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
