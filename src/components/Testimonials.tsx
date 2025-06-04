@@ -1,7 +1,11 @@
 
 import { Star } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
 
 export const Testimonials = () => {
+  const [api, setApi] = useState<any>();
+  
   const testimonials = [
     {
       name: "Maria Rodriguez",
@@ -49,6 +53,17 @@ export const Testimonials = () => {
     </div>
   );
 
+  // Auto-advance carousel
+  useEffect(() => {
+    if (!api) return;
+
+    const timer = setInterval(() => {
+      api.scrollNext();
+    }, 6000); // 6 seconds
+
+    return () => clearInterval(timer);
+  }, [api]);
+
   return (
     <section className="py-24 bg-gradient-to-br from-[rgb(247,220,208)] to-brand-purple/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,28 +77,43 @@ export const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="group">
-              <div className={`${testimonial.bgColor} rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${testimonial.borderColor} hover:scale-[1.02]`}>
-                <div className="mb-6">
-                  <StarRating rating={testimonial.rating} />
-                </div>
-                <blockquote className="text-gray-700 mb-8 leading-relaxed italic text-lg font-medium">
-                  "{testimonial.text}"
-                </blockquote>
-                <div className="flex items-center">
-                  <div className={`w-16 h-16 ${testimonial.accentColor} rounded-full flex items-center justify-center text-white font-bold text-xl mr-6 shadow-lg`}>
-                    {testimonial.name.charAt(0)}
+        <div className="max-w-4xl mx-auto">
+          <Carousel 
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-4">
+                    <div className={`${testimonial.bgColor} rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${testimonial.borderColor} hover:scale-[1.02]`}>
+                      <div className="mb-6">
+                        <StarRating rating={testimonial.rating} />
+                      </div>
+                      <blockquote className="text-gray-700 mb-8 leading-relaxed italic text-lg font-medium">
+                        "{testimonial.text}"
+                      </blockquote>
+                      <div className="flex items-center">
+                        <div className={`w-16 h-16 ${testimonial.accentColor} rounded-full flex items-center justify-center text-white font-bold text-xl mr-6 shadow-lg`}>
+                          {testimonial.name.charAt(0)}
+                        </div>
+                        <div>
+                          <div className="font-bold text-[#2C3E50] text-lg">{testimonial.name}</div>
+                          <div className="text-gray-500 text-base">{testimonial.location}</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="font-bold text-[#2C3E50] text-lg">{testimonial.name}</div>
-                    <div className="text-gray-500 text-base">{testimonial.location}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 bg-white/90 hover:bg-white border-2 border-brand-purple/20 hover:border-brand-purple/40" />
+            <CarouselNext className="hidden md:flex -right-12 bg-white/90 hover:bg-white border-2 border-brand-purple/20 hover:border-brand-purple/40" />
+          </Carousel>
         </div>
 
         <div className="mt-20 text-center">

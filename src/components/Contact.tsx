@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,6 +15,7 @@ export const Contact = () => {
     property: '',
     message: ''
   });
+  const [isMessageExpanded, setIsMessageExpanded] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,6 +33,7 @@ export const Contact = () => {
       property: '',
       message: ''
     });
+    setIsMessageExpanded(false);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -56,12 +58,12 @@ export const Contact = () => {
 
         <div className="grid lg:grid-cols-3 gap-12 items-start">
           {/* Contact Form - Takes up 2 columns */}
-          <div className="lg:col-span-2 bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-brand-purple/20">
+          <div className="lg:col-span-2 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-brand-purple/20">
             <h3 className="text-2xl font-bold text-[#2C3E50] mb-6">Send Us a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-[#2C3E50] mb-2">
+                  <label htmlFor="name" className="block text-sm font-bold text-[#2C3E50] mb-2">
                     Full Name *
                   </label>
                   <Input
@@ -76,7 +78,7 @@ export const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-[#2C3E50] mb-2">
+                  <label htmlFor="phone" className="block text-sm font-bold text-[#2C3E50] mb-2">
                     Phone Number *
                   </label>
                   <Input
@@ -93,7 +95,7 @@ export const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[#2C3E50] mb-2">
+                <label htmlFor="email" className="block text-sm font-bold text-[#2C3E50] mb-2">
                   Email Address *
                 </label>
                 <Input
@@ -109,7 +111,7 @@ export const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="property" className="block text-sm font-medium text-[#2C3E50] mb-2">
+                <label htmlFor="property" className="block text-sm font-bold text-[#2C3E50] mb-2">
                   Property Address
                 </label>
                 <Input
@@ -124,18 +126,25 @@ export const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[#2C3E50] mb-2">
-                  Tell Us About Your Situation
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="border-gray-300 focus:border-brand-purple focus:ring-brand-purple"
-                  placeholder="Tell us about your inherited property, timeline, or any specific concerns..."
-                />
+                <button
+                  type="button"
+                  onClick={() => setIsMessageExpanded(!isMessageExpanded)}
+                  className="flex items-center space-x-2 text-sm font-bold text-[#2C3E50] mb-2 hover:text-brand-purple transition-colors"
+                >
+                  <span>Tell Us About Your Situation (Optional)</span>
+                  {isMessageExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                </button>
+                {isMessageExpanded && (
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="border-gray-300 focus:border-brand-purple focus:ring-brand-purple"
+                    placeholder="Tell us about your inherited property, timeline, or any specific concerns..."
+                  />
+                )}
               </div>
 
               <Button 
