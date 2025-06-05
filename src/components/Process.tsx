@@ -15,36 +15,36 @@ export const Process = () => {
       icon: Phone,
       title: "Reach Out",
       description: "Call us or fill out our form. We'll discuss your inherited property situation with compassion and understanding.",
-      color: "bg-brand-purple",
-      cardBg: "bg-brand-purple/10",
-      border: "border-brand-purple/20"
+      color: "bg-gray-700",
+      cardBg: "bg-white",
+      border: "border-gray-200"
     },
     {
       icon: Search,
       title: "Property Review", 
       description: "We'll review your property details and provide a fair, transparent offer based on current market conditions.",
-      color: "bg-brand-blue",
-      cardBg: "bg-brand-blue/12",
-      border: "border-brand-blue/25"
+      color: "bg-gray-800",
+      cardBg: "bg-gray-50",
+      border: "border-gray-200"
     },
     {
       icon: Handshake,
       title: "Finalize Sale",
       description: "Choose your closing date. We handle all paperwork and can close in as little as 7 days - completely hassle-free.",
-      color: "bg-brand-purple",
-      cardBg: "bg-brand-purple/10",
-      border: "border-brand-purple/20"
+      color: "bg-gray-600",
+      cardBg: "bg-white",
+      border: "border-gray-200"
     }
   ];
 
   return (
-    <section id="process" className="py-24 bg-gradient-to-br from-brand-blue/15 to-brand-blue-light/12">
+    <section id="process" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-shadow-light text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
+          <h2 className="text-shadow-light text-3xl md:text-4xl font-bold text-[#222] mb-6">
             Simple 3-Step Process
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-[#333] max-w-3xl mx-auto leading-relaxed">
             We've simplified selling your inherited property into three easy steps. 
             No complicated paperwork, no repairs needed, no stress.
           </p>
@@ -55,7 +55,7 @@ export const Process = () => {
             <div key={index} className="relative group">
               {/* Connection Line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-5 w-10 h-1 bg-gradient-to-r from-brand-purple to-brand-blue transform -translate-y-1/2 z-10 rounded-full"></div>
+                <div className="hidden md:block absolute top-1/2 -right-5 w-10 h-1 bg-gray-400 transform -translate-y-1/2 z-10 rounded-full"></div>
               )}
               
               <div className={`${step.cardBg} rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-300 group-hover:scale-105 border-2 ${step.border}`}>
@@ -66,8 +66,8 @@ export const Process = () => {
                   <div className="bg-brand-purple text-white text-lg font-bold rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-6 shadow-md">
                     {index + 1}
                   </div>
-                  <h3 className="text-2xl font-bold text-[#2C3E50] mb-6">{step.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg">{step.description}</p>
+                  <h3 className="text-2xl font-bold text-[#222] mb-6">{step.title}</h3>
+                  <p className="text-[#333] leading-relaxed text-lg">{step.description}</p>
                 </div>
               </div>
             </div>

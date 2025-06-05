@@ -7,48 +7,48 @@ export const Benefits = () => {
       icon: Heart,
       title: "Experience with Inherited Properties",
       description: "We understand the emotional and legal complexities of inherited property. Our team guides you through every step with empathy and expertise.",
-      iconBg: "bg-brand-purple",
-      cardBg: "bg-brand-purple/25",
-      borderColor: "border-brand-purple/20",
-      hoverBorder: "hover:border-brand-purple/40"
+      iconBg: "bg-gray-700",
+      cardBg: "bg-white",
+      borderColor: "border-gray-200",
+      hoverBorder: "hover:border-gray-300"
     },
     {
       icon: DollarSign,
       title: "Transparent, Fair Offers",
       description: "No lowball offers or hidden fees. We provide honest, market-based valuations and explain exactly how we determine our offer price.",
-      iconBg: "bg-brand-blue",
-      cardBg: "bg-brand-blue/25",
-      borderColor: "border-brand-blue/25",
-      hoverBorder: "hover:border-brand-blue/45"
+      iconBg: "bg-gray-800",
+      cardBg: "bg-gray-50",
+      borderColor: "border-gray-200",
+      hoverBorder: "hover:border-gray-300"
     },
     {
       icon: Home,
       title: "Sell As-Is From Anywhere",
       description: "Don't worry about repairs, cleaning, or staging. We buy properties in any condition, and you don't need to be local to complete the sale.",
-      iconBg: "bg-brand-purple",
-      cardBg: "bg-brand-purple/25",
-      borderColor: "border-brand-purple/20",
-      hoverBorder: "hover:border-brand-purple/40"
+      iconBg: "bg-gray-600",
+      cardBg: "bg-white",
+      borderColor: "border-gray-200",
+      hoverBorder: "hover:border-gray-300"
     },
     {
       icon: Clock,
       title: "Decades of Proven Results",
       description: "With over 20 years of experience in Tampa Bay and West Florida, we've helped hundreds of families successfully sell inherited properties.",
-      iconBg: "bg-brand-blue",
-      cardBg: "bg-brand-blue/25",
-      borderColor: "border-brand-blue/25",
-      hoverBorder: "hover:border-brand-blue/45"
+      iconBg: "bg-gray-900",
+      cardBg: "bg-gray-50",
+      borderColor: "border-gray-200",
+      hoverBorder: "hover:border-gray-300"
     }
   ];
 
   return (
-    <section id="benefits" className="py-24 bg-gradient-to-br from-brand-purple/30 to-brand-blue/25">
+    <section id="benefits" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-shadow-light text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
+          <h2 className="text-shadow-light text-3xl md:text-4xl font-bold text-[#222] mb-6">
             Why Choose SellMyHouseNow.com?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-[#333] max-w-3xl mx-auto leading-relaxed">
             We specialize in helping families navigate the complexities of selling inherited property 
             with compassion, transparency, and decades of local expertise.
           </p>
@@ -63,8 +63,8 @@ export const Benefits = () => {
                     <benefit.icon className="w-10 h-10 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#2C3E50] mb-4 leading-tight">{benefit.title}</h3>
-                    <p className="text-gray-600 leading-relaxed text-lg">{benefit.description}</p>
+                    <h3 className="text-2xl font-bold text-[#222] mb-4 leading-tight">{benefit.title}</h3>
+                    <p className="text-[#333] leading-relaxed text-lg">{benefit.description}</p>
                   </div>
                 </div>
               </div>
@@ -72,10 +72,10 @@ export const Benefits = () => {
           ))}
         </div>
 
-        <div className="mt-20 bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-xl border-2 border-brand-purple/15 hover:border-brand-purple/25 transition-colors duration-300">
+        <div className="mt-20 bg-white rounded-3xl p-10 shadow-xl border-2 border-gray-200 hover:border-gray-300 transition-colors duration-300">
           <div className="text-center">
-            <h3 className="text-3xl font-bold text-[#2C3E50] mb-6">Serving Tampa Bay & West Florida</h3>
-            <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
+            <h3 className="text-3xl font-bold text-[#222] mb-6">Serving Tampa Bay & West Florida</h3>
+            <p className="text-[#333] mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
               Our local expertise covers Hillsborough, Pinellas, Pasco, Hernando, and surrounding counties. 
               We know the local market conditions and can provide accurate valuations for your inherited property.
             </p>
@@ -83,11 +83,7 @@ export const Benefits = () => {
               {['Tampa', 'St. Petersburg', 'Clearwater', 'New Port Richey', 'Spring Hill', 'Brooksville', 'Plant City', 'Safety Harbor'].map((city, idx) => (
                 <span 
                   key={city} 
-                  className={`px-5 py-3 rounded-full font-semibold text-white shadow-md hover:shadow-lg transition-all duration-200 ${
-                    idx % 3 === 0 ? 'bg-brand-purple hover:bg-brand-blue hover:text-[#2C3E50]' :
-                    idx % 3 === 1 ? 'bg-brand-blue hover:bg-brand-purple text-[#2C3E50] hover:text-white' :
-                    'bg-brand-coral hover:bg-brand-cream text-[#2C3E50]'
-                  }`}
+                  className="px-5 py-3 rounded-full font-semibold text-white shadow-md hover:shadow-lg transition-all duration-200 bg-gray-700 hover:bg-gray-800"
                 >
                   {city}
                 </span>

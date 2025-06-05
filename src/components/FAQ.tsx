@@ -46,27 +46,27 @@ export const FAQ = () => {
     const isEven = index % 2 === 0;
     if (isEven) {
       return {
-        background: "bg-brand-purple/12",
-        border: "border-l-4 border-brand-purple",
-        hoverText: "hover:text-brand-purple"
+        background: "bg-white",
+        border: "border-l-4 border-gray-400",
+        hoverText: "hover:text-gray-700"
       };
     } else {
       return {
-        background: "bg-brand-blue/15",
-        border: "border-l-4 border-brand-blue",
-        hoverText: "hover:text-brand-blue"
+        background: "bg-gray-50",
+        border: "border-l-4 border-gray-500",
+        hoverText: "hover:text-gray-800"
       };
     }
   };
 
   return (
-    <section id="faq" className="py-24 bg-gradient-to-br from-brand-cream/30 to-brand-blue/15">
+    <section id="faq" className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-shadow-light text-3xl md:text-4xl font-bold text-[#2C3E50] mb-6">
+          <h2 className="text-shadow-light text-3xl md:text-4xl font-bold text-[#222] mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-xl text-[#333] leading-relaxed">
             We understand you have questions about selling inherited property. 
             Here are answers to the most common concerns we hear from families.
           </p>
@@ -81,10 +81,10 @@ export const FAQ = () => {
                 value={`item-${index}`}
                 className={`rounded-2xl px-8 ${styling.border} border-r border-t border-b border-gray-200 hover:shadow-lg transition-all duration-200 ${styling.background}`}
               >
-                <AccordionTrigger className={`text-left text-[#2C3E50] font-bold ${styling.hoverText} transition-colors py-8 text-lg`}>
+                <AccordionTrigger className={`text-left text-[#222] font-bold ${styling.hoverText} transition-colors py-8 text-lg`}>
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 pb-8 leading-relaxed text-lg">
+                <AccordionContent className="text-[#333] pb-8 leading-relaxed text-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -93,11 +93,11 @@ export const FAQ = () => {
         </Accordion>
 
         <div className="text-center mt-16">
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-brand-purple/20">
-            <p className="text-gray-600 mb-4 text-lg">Have a question not answered here?</p>
+          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg border-2 border-gray-200">
+            <p className="text-[#333] mb-4 text-lg">Have a question not answered here?</p>
             <a 
               href="tel:+1-813-555-0199" 
-              className="inline-flex items-center text-brand-purple hover:text-brand-blue font-bold transition-colors text-lg"
+              className="inline-flex items-center text-brand-purple hover:text-gray-700 font-bold transition-colors text-lg"
             >
               Call us at (813) 555-0199 and we'll answer any questions you have.
             </a>
